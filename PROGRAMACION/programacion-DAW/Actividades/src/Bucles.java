@@ -46,6 +46,6 @@ public class Bucles {
 
 
 
-
+    teclado.close();
     }
 }
