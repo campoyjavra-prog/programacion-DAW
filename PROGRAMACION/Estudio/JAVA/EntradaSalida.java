@@ -11,6 +11,6 @@ public class EntradaSalida {
         //Incluir un icono 
         System.out.println("Que ganas tengo de unas vacaciones \u26F1");
         //Formato reciente de System\
-        System.out.println("El precio del producto "+"Tablet "+"tiene un valor de "+precio+" y se han comprado "+valor);
+        System.out.print("El precio del producto "+"Tablet "+"tiene un valor de "+precio+" y se han comprado "+valor);
     }
 }
