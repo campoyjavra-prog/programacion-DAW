@@ -34,9 +34,9 @@ public class TicTacToe {
             turno=!turno;
         }while(!comprobarGanador(turno));
         if(turno==true) System.out.println("El juagador1 ha ganado");
-        else {System.out.println("El juagador2 ha ganado");}
-
-        teclado.close();
+        else {System.out.println("El juagador2 ha ganado");
+        }
+    
         
     }
     public static void imprimeMatriz(){
