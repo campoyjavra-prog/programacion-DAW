@@ -1,5 +1,62 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+header {
+    flex-basis: 5%;
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    color: rgb(24, 24, 24);
+}
+
+header i {
+    background-color: bisque;
+}
+
+header #menu {
+    flex-basis: 5%;
+    background-color: rgb(240, 240, 240);
+}
+
+header #buscar {
+    flex-basis: 30%;
+    background-color: rgb(196, 196, 146);
+}
+
+header figure {
+    background-color: rgb(172, 120, 120);
+    flex-basis: 10%;
+}
+
+header #enlaces {
+    background-color: rgb(153, 199, 184);
+    flex-basis: 30%;
+}
+
+header #login {
+    background-color: rgb(136, 111, 160);
+    flex-basis: 20%;
+}
+
+main {
+    flex-basis: 65%;
+    background-color: azure;
+}
+
+footer {
+    flex-basis: 30%;
+    background-color: black;
 }
