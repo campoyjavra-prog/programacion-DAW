@@ -12,12 +12,12 @@ public class ActividadesFuncionesDefinidas {
         double raiz1=Math.sqrt(nuemro1);
         double raiz2=Math.sqrt(numero2);
         // Sacar resultados
-        System.out.println("Los numeros generados son: "+nuemro1+" y "+numero2+"");
-        System.out.println("El cociente es: "+cociente);
-        System.out.println("La media es: "+media);
-        System.out.println("La potencia es:"+potencia);
-        System.out.println("La raiz cuadrada de numero1 es:"+raiz1);
-        System.out.println("La raiz cuadrada de numero2 es:"+raiz2);
+        System.out.println("Los numeros generados son: " +nuemro1+" y "+numero2+"");
+        System.out.println("El cociente es: " +cociente);
+        System.out.println("La media es: " +media);
+        System.out.println("La potencia es: "+potencia);
+        System.out.println("La raiz cuadrada de numero1 es: "+raiz1);
+        System.out.println("La raiz cuadrada de numero2 es: "+raiz2);
 
     }
 }
