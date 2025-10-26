@@ -9,31 +9,48 @@ public class ActividadCondiconal2 {
         System.out.println("Introduce la nota: ");
         int nota=teclado.nextInt();
 
-        if(nota>=0 && nota <5){
-            System.out.println("Suspenso");
-        }
-        else if (nota>=5 && nota<7){
-            System.out.println("Aprobado");
-        }
-        else if(nota>=7 && nota <9){
-            System.out.println("Notable");
-        }
-        else if(nota>=9 && nota <=10){
-            System.out.println("Sobresaliente");
-        }
-        else{
-            System.out.println("Nota incorrecta");
+       // Convertir la nota en un rango de categorías para el switch
+        int categoria;
+
+        if (nota >= 0 && nota < 5) {
+            categoria = 1; // Suspenso
+        } else if (nota == 5) {
+            categoria = 2; // Aprobado (nota 5)
+        } else if (nota >= 6 && nota < 7) {
+            categoria = 3; // Bien (nota entre 6 y 7)
+        } else if (nota >= 7 && nota < 9) {
+            categoria = 4; // Notable
+        } else if (nota >= 9 && nota <= 10) {
+            categoria = 5; // Sobresaliente
+        } else {
+            categoria = 0; // Nota incorrecta
         }
 
-        switch(nota){
-            
-            case 1: System.out.println("Suspenso");break;
-            case 2: System.out.println("Aprobado");break;
-            case 3: System.out.println("Notable");break;
-            case 4: System.out.println("Sobresaliente");break;
-
-            default:System.out.println("Nota incorrecta");break;
+        // Usar switch con las categorías
+        switch (categoria) {
+            case 1:
+                System.out.println("Suspenso");
+                break;
+            case 2:
+                System.out.println("Aprobado");
+                break;
+            case 3:
+                System.out.println("Bien");
+                break;
+            case 4:
+                System.out.println("Notable");
+                break;
+            case 5:
+                System.out.println("Sobresaliente");
+                break;
+            case 0:
+                System.out.println("Nota incorrecta");
+                break;
+            default:
+                System.out.println("Error");
+                break;
         }
+
         teclado.close();
     }    
 }

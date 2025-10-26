@@ -8,7 +8,7 @@ public class ActividadCondiconal1 {
         int a=0,b=0,c=0;
         Scanner teclado = new Scanner(System.in);
         System.out.println("Introduce los valores de a b c: ");
-        a=teclado.nextInt();  
+        a=teclado.nextInt();
         b=teclado.nextInt();
         c=teclado.nextInt();
         double x1=0,x2=0;
