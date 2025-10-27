@@ -126,9 +126,27 @@ public class ActividadesT2 {
                 System.out.println("ERROR");
                 break;
         }
+        teclado.close();
     } */ 
 
     /* */ //Haz un programa que solicita el día, mes y año y comprueba si es válido. Para el año hay que ver si el 29 es válido por ser bisiesto. Un año es bisiesto si: (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
 
+        //Leer variables
+        System.out.print("Introduce el dia: ");
+        int dia = teclado.nextInt();
+
+        System.out.print("Introduce el mes: ");
+        int mes = teclado.nextInt();
+
+        System.out.println("Introduce el año: ");
+        int año = teclado.nextInt();
+
+        //Condicionales
+        
+
+
+    }
 
 }
