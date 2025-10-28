@@ -293,7 +293,33 @@ public class ActividadesT2 {
     
     /* */ // Desarrolla un programa que trate de adivinar un número entre 1 y 100 generado aleatorio, que vaya indicando si has introducido un número mayor o menor al correcto y el número de intentos.
     public static void main(String[] args) {
+      int aleatorio = (int)(Math.random()*(100-1+1)+1);
+      int numero = 0;
+      int intentos = 0;
+      boolean encontrado = false;
+
+      Scanner teclado = new Scanner(System.in);
+
+      System.out.println("Introduce un numero: ");
+      numero = teclado.nextInt();
+      do{
+        if (numero > aleatorio){
+            System.out.println("El numero aleatorio es menor al introducido: ");
+        } 
+        else if (numero < aleatorio){
+            System.out.println("El numero aleatorio es mayor al introducido: ");
+        }
+        else {
+            encontrado = true;
+        }
+        intentos++;
+        
+
+      } while (!encontrado);
+      System.out.println("Has usado esta cantidad de intentos para adivinar el numero aleatorio: "+intentos);
       
+      teclado.close();
+
     }
 }
 
