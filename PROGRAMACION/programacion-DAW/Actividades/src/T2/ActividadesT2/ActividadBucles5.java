@@ -15,16 +15,16 @@ public class ActividadBucles5 {
             //Vamos a leer el número
             System.out.print("Introduce un número: ");
             numero=teclado.nextInt();
-            if(numero>aleatorio){
+            if(numero>aleatorio){ 
                 System.out.println("El número es menor al que has introducido");
-            }
+            }          
             else if(numero<aleatorio){
                 System.out.println("El número es mayor al que has introducido");
             }
             else{
                 System.out.println("Has acertado con el número");
                 encontrado=true;
-            }
+            } 
             intentos++;
            
         } while (!encontrado);

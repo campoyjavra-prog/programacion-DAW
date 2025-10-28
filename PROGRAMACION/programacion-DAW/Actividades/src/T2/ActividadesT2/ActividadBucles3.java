@@ -26,6 +26,7 @@ public class ActividadBucles3 {
             }
           
         } while (edad!=-1);
+
         System.out.println("El número de personas: "+contadorPersona);
         System.out.println("El máximo es: "+maximo);
         System.out.println("El mínimo es: "+minimo);

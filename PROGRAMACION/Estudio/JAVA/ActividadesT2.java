@@ -129,24 +129,172 @@ public class ActividadesT2 {
         teclado.close();
     } */ 
 
-    /* */ //Haz un programa que solicita el día, mes y año y comprueba si es válido. Para el año hay que ver si el 29 es válido por ser bisiesto. Un año es bisiesto si: (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
+    /*  //Haz un programa que solicita el día, mes y año y comprueba si es válido. Para el año hay que ver si el 29 es válido por ser bisiesto. Un año es bisiesto si: (anio % 4 == 0 && anio % 100 != 0) || (anio % 400 == 0)
     public static void main(String[] args) {
         Scanner teclado = new Scanner(System.in);
 
-        //Leer variables
-        System.out.print("Introduce el dia: ");
+        System.out.print("Inserta el dia: ");
         int dia = teclado.nextInt();
-
-        System.out.print("Introduce el mes: ");
+        System.out.print("Inserta el mes: ");
         int mes = teclado.nextInt();
-
-        System.out.println("Introduce el año: ");
+        System.out.print("Inserta el año: ");
         int año = teclado.nextInt();
 
-        //Condicionales
+        boolean fechaValida = true;
+
+        switch (mes) {
+            case 1:
+            case 3:
+            case 5:
+            case 7:
+            case 8:
+            case 10:
+            case 12:
+                if (dia < 1 || dia > 31){
+                    fechaValida = false;
+                }
+                break;
+        
+            case 4:
+            case 6:
+            case 9:
+            case 11:
+                if (dia < 1 || dia > 30){
+                    fechaValida = false;
+                }
+                break;
+            
+            case 2:
+                if (dia < 1 || dia > 28){
+                    fechaValida = false;
+                }
+                else if (dia == 29){
+                    if ( (!(año % 4 == 0 && año % 100 != 0) || (año % 400 == 0))) {
+                        fechaValida = false;
+
+                    }
+
+                }
+
+                break;
+            default:
+                fechaValida = false;
+        }
+
+        if (fechaValida) {
+            System.out.println("Fecha correcta");
+        }
+        else {
+            System.out.println("Fecha incorrecta");
+        }
+
+    teclado.close();
+
+    } */
+
+    //BUCLES
+
+    /*  // 1)Desarrolla un programa que muestre los números entre 50 y 200 que son múltiplos de 2 y 3
+    public static void main(String[] args) {
+
+   System.out.println("Estos son todos los numeros entre el 50 y 200 que son multiplos de 2 y 3: ");
+
+   for (int i = 50; i <= 200; i++){
+        if (i % 2 == 0 && i % 3 == 0){
+            System.out.println(i);
+        }
+   }
+ } */
+
+    /*  // 2) Desarrolla un programa que calcule el factorial del número introducido. Ej: 4!= 4*3*2*1
+    public static void main(String[] args) {
+        Scanner teclado = new Scanner(System.in);
+
+        System.out.println("Introduzca un numero: ");
+        int numero = teclado.nextInt();
+
+        long factorial = 1;
+        for (int i = 1; i <= numero; i++){
+            factorial = factorial * i;
+        }
+
+        System.out.println("El factorial del numero "+numero+ " es: "+factorial);
+    } */
+
+    /*  // 3) Desarrolla un programa que muestre la edad máxima y mínima de un grupo de alumnos que se introduzca hasta escribir -1
+    public static void main(String[] args) {
+        int maxima = -1;
+        int minima = 1000000000;
+        int contadorPersona = 0;
+
+        Scanner teclado = new Scanner(System.in);
         
 
+        int edad;
+        do {
+        System.out.println("Introduce una edad o -1 para salir: ");
+        edad = teclado.nextInt();
+        if (edad!=-1){
+            contadorPersona++;
+        }
+        if (edad > maxima){
+            maxima = edad;
+        }
+        if (edad < minima && edad != -1){ 
+            minima = edad;
+        }
+        } while (edad != -1);
 
+        System.out.println("El número de personas: "+contadorPersona);
+        System.out.println("El máximo es: "+maxima);
+        System.out.println("El mínimo es: "+minima);
+    } */
+
+    /*  // 4) Continúa el programa anterior para que calcule la suma, media, número de alumnos y cuántos son mayores de edad
+    public static void main(String[] args) {
+        int maxima = -1;
+        int minima = 1000000000;
+        int contadorPersona = 0;
+        int mayor18 = 0;
+        int suma = 0;
+
+        Scanner teclado = new Scanner(System.in);
+        
+
+        int edad;
+        do {
+        System.out.println("Introduce una edad o -1 para salir: ");
+        edad = teclado.nextInt();
+        if (edad!=-1){
+            contadorPersona++;
+        }
+        if (edad > maxima){
+            maxima = edad;
+        }
+        if (edad < minima && edad != -1){ 
+            minima = edad;
+        }
+        if (edad>=18){
+            mayor18++;
+        }
+        if (edad != -1){
+            suma = suma + edad;
+        }
+
+        } while (edad != -1);
+
+        System.out.println("El número de personas: "+contadorPersona);
+        System.out.println("El máximo es: "+maxima);
+        System.out.println("El mínimo es: "+minima);  
+        System.out.println("El número de mayores de 18: "+mayor18);
+        System.out.println("Suma de edades: "+suma);
+        System.out.println("Media de edades: "+(suma/contadorPersona));
+    } */
+    
+    /* */ // Desarrolla un programa que trate de adivinar un número entre 1 y 100 generado aleatorio, que vaya indicando si has introducido un número mayor o menor al correcto y el número de intentos.
+    public static void main(String[] args) {
+      
     }
-
 }
+
+

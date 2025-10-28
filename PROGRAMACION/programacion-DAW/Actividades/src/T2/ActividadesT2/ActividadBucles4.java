@@ -28,7 +28,7 @@ public class ActividadBucles4 {
                 mayor18++;
             }
             if(edad!=-1){
-                suma+=edad; 
+                suma = suma + edad;
             }
         } while (edad!=-1);
         System.out.println("El número de personas: "+contadorPersona);
