@@ -190,7 +190,7 @@ public class ActividadesT2 {
 
     teclado.close();
 
-    } */
+    } 
 
     //BUCLES
 
