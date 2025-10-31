@@ -67,15 +67,56 @@ header form input {
     background-color: antiquewhite;
     font-family: Georgia, 'Times New Roman', Times, serif;
 
+}
+
+header nav {
+    /* border: 1px solid white; */
+    flex-basis: 30%;
+    display: flex;
+    flex-direction: row; /* ejej principal */
+    flex-wrap: nowrap;
+    justify-content: space-around; /* alineacion en eje principal */
+    align-items: center; /* alineacion en eje secundario */
 
 }
 
-header #enlaces {
+header nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+}
+
+header nav a:hover {
+    color: rgb(218, 253, 111)
+
+}
+
+header#carrito {
+    /* border: 1px solid white; */
+    color: white;
+    flex-basis: 10%; 
+    display: flex;
+    flex-direction: row-reverse; /* ejej principal */
+    flex-wrap: nowrap;   
+    justify-content: space-around; /* alineacion en eje principal */
+    align-items: center; /* alineacion en eje secundario */
+
+}
+
+header#carrito i {
+    font-size: 25px;
+    color: green;
+
+}
+
+header#enlaces {
     background-color: rgb(153, 199, 184);
     flex-basis: 30%;
 }
 
-header #login {
+header#login {
     background-color: rgb(136, 111, 160);
     flex-basis: 20%;
 }
@@ -87,5 +128,26 @@ main {
 
 footer {
     flex-basis: 30%;
-    background-color: black;
+    background-color: rgb(213, 194, 73);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+footer nav#sociales {
+    background-color: rgb(200, 0, 0);
+    flex-basis: 50%;
+
+}
+
+footer div#suscribete {
+    background-color: rgb(179, 130, 66);
+    flex-basis: 50%;
+
+}
+
+footer article {
+    background-color: aquamarine;
+    flex-basis: 33%;
+
 }
