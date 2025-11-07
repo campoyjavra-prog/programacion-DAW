@@ -6,7 +6,7 @@
 
 body {
     /* medida fija/absoluta --> px */
-    height: 100vh; 
+    height: 100vh;
     display: flex;
     flex-direction: column;
     flex-wrap: nowrap;
@@ -14,140 +14,162 @@ body {
 
 header {
     /* altura/anchura relativa % */
-    /* flex-basis: 5%; */
-    height: 5vh; /* Altura fija/absoluta */
-    background-color: rgb(0, 0, 0);
+    /* flex-basis: 5%; */ /* relativo */
+    height: 5vh; /* altura fija/absoluta adapta viewport */
+    background-color: black;
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
-    justify-content: space-between;  
+    /* justify-content: space-between; */
     align-items: center;
-    color: rgb(24, 24, 24);
+    color: white;
 }
-
-header i {
-    background-color: bisque;
-}
-
 header #menu {
     flex-basis: 5%;
-    background-color: rgb(240, 240, 240);
 }
 
 header #buscar {
     flex-basis: 30%;
-    background-color: rgb(216, 216, 143);
+    background-color: blue;
 }
-
 header figure {
-    flex-basis: 10%; /* de ancho */
+    flex-basis: 10%; /* WIDTH */
     height: 100%;
 }
-
-header figure img {
-    height: 100%; /* 70% altura del padre *//* NO SE PONE EN HTML */ /* TAMPOCO px PQ SE VERIA MAL SEGUN EL DISPLAY */ 
-} 
-
-header form {
-    flex-basis: 20%; 
+header figure img{
+    height: 100%; /* 70% de la height del padre */
+}
+header form{
+    flex-basis: 20%; /* WIDTH */
     height: 100%;
+    background-color: red;
     display: flex;
     flex-direction: column; /* eje principal columna */
-    justify-content: center; /* eje principal */
-    align-items: center;
-    
+    justify-content: center; /* alineacion en eje principal */
+    align-items: center; /* alineacion en eje secunfdario */
 }
 
-header form input {
-    flex-basis: 50%; /* altura */
+header form input{
+    flex-basis: 50%; /* height */
     width: 80%;
-    border-radius: 30px;
+    border-radius: 20px;
     font-size: 20px;
-    color: rgb(49, 55, 53);
-    background-color: antiquewhite;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-
+    color: blue;
+    background-color: bisque;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
-
-header nav {
-    /* border: 1px solid white; */
-    flex-basis: 30%;
-    display: flex;
-    flex-direction: row; /* ejej principal */
-    flex-wrap: nowrap;
-    justify-content: space-around; /* alineacion en eje principal */
-    align-items: center; /* alineacion en eje secundario */
-
-}
-
-header nav a {
-    color: white;
-    text-decoration: none;
-    font-size: 18px;
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-
-}
-
-header nav a:hover {
-    color: rgb(218, 253, 111)
-
-}
-
-header#carrito {
-    /* border: 1px solid white; */
-    color: white;
-    flex-basis: 10%; 
-    display: flex;
-    flex-direction: row-reverse; /* ejej principal */
-    flex-wrap: nowrap;   
-    justify-content: space-around; /* alineacion en eje principal */
-    align-items: center; /* alineacion en eje secundario */
-
-}
-
-header#carrito i {
-    font-size: 25px;
-    color: green;
-
-}
-
-header#enlaces {
-    background-color: rgb(153, 199, 184);
+header #enlaces {
+    background-color: yellow;
     flex-basis: 30%;
 }
-
-header#login {
-    background-color: rgb(136, 111, 160);
-    flex-basis: 20%;
-}
-
 main {
     flex-basis: 65%;
     background-color: azure;
 }
 
-footer {
-    flex-basis: 30%;
-    background-color: rgb(213, 194, 73);
+main section {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
+
+}
+
+main section article {
+
+
+}
+
+main section
+footer {
+    flex-basis: 30%;
+    background-color: black;
+    display: flex;
+    flex-direction: row;
+    /* todos los hijos (items) en una sola linea */
+    /*flex-wrap: nowrap;*/
+    /* todos los hijos (items) en varias lineas en funccion flexbasic */
     flex-wrap: wrap;
 }
-
 footer nav#sociales {
-    background-color: rgb(200, 0, 0);
-    flex-basis: 50%;
+    background-color: red;
+    flex-basis: 50%; /* height (columno) / width (row) */
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    align-items: center;
+    padding-left: 30px;
+}
+footer nav#sociales a{
+    /*Estado de reposo del enlace*/
+    text-decoration: none;
+    border: 0px solid black; 
+    background-color: lightgreen;
+    /* elemento en linea pero con propiedades de bloque */
+    display: inline-block;
+    
+    width: 30px;
+    height: 30px;
+    border-radius:50px;
+    margin-right: 7px;;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 
+    /*Realizar un cambio animado*/
+    transition: all 0.3s ease-in-out;
+    
 }
 
-footer div#suscribete {
-    background-color: rgb(179, 130, 66);
-    flex-basis: 50%;
-
+footer nav#sociales a:hover{
+    /*Estado sobre (fotograma)*/
+    transform: translate(0px, -10px) 
+    /*rotate(60deg)
+    scale(1,2);*/
 }
 
-footer article {
-    background-color: aquamarine;
+
+footer nav#sociales a i {
+    font-size: 20px;
+    color: white;
+}
+    
+footer div#subscribete{
+    background-color: burlywood;
+    flex-basis: 50%;
+    
+}
+
+footer article{
+    background-color: cadetblue;
     flex-basis: 33%;
+}
+
+footer article h3{
+
+}
+
+footer article nav{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+footer article nav a{
+
+}
+
+footer article nav a i{
+
+}
+
+footer article nav a span{
+    
+}
+
+footer article a{
+    border: 1px yellow;
 
 }
