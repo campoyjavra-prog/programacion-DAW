@@ -7,11 +7,11 @@ public class Programa2 {
 
     public static void main(String[] args) {
         // Crear el objeto Scanner para leer datos del usuario
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         // Solicitar al usuario cuántos números desea introducir
         System.out.print("¿Cuántos números deseas introducir? ");
-        int cantidad = scanner.nextInt();
+        int cantidad = teclado.nextInt();
         
         // Crear un array dinámico para almacenar los números
         int[] numeros = new int[cantidad];
@@ -19,11 +19,11 @@ public class Programa2 {
         // Solicitar los números al usuario
         for (int i = 0; i < cantidad; i++) {
             System.out.print("Introduce el número " + (i + 1) + ": ");
-            numeros[i] = scanner.nextInt();  // Guardar el número en el array
+            numeros[i] = teclado.nextInt();  // Guardar el número en el array
         }
 
         // Mostrar el vector original
-        System.out.println("\nVector original:");
+        System.out.println("Vector original:");
         mostrarArray(numeros);  // Llamada a la función para mostrar el array
         
         // Ordenar el array de mayor a menor
@@ -33,7 +33,7 @@ public class Programa2 {
         invertirArray(numeros);
         
         // Mostrar el array ordenado de mayor a menor
-        System.out.println("\nVector ordenado de mayor a menor:");
+        System.out.println("Vector ordenado de mayor a menor:");
         mostrarArray(numeros);  // Llamada a la función para mostrar el array ordenado
     }
 

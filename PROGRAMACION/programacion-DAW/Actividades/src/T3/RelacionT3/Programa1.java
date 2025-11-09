@@ -20,7 +20,7 @@ public class Programa1 {
         vector = pop(vector);
 
         // Mostrar los elementos del vector después de pop
-        System.out.println("\nDespués de hacer pop:");
+        System.out.println("Pop:");
         for (int i = 0; i < vector.length; i++) {
             System.out.println(vector[i] + " ");
         }

@@ -7,7 +7,7 @@ public class Programa9 {
     
     public static void main(String[] args) {
         ArrayList<Integer> listaNumeros = new ArrayList<>();
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         int opcion;
         
         do {
@@ -21,20 +21,20 @@ public class Programa9 {
             System.out.println("7. Salir");
             System.out.print("Elige una opción: ");
             
-            opcion = scanner.nextInt();
+            opcion = teclado.nextInt();
             
             switch (opcion) {
                 case 1:
-                    agregarNumero(listaNumeros, scanner);
+                    agregarNumero(listaNumeros, teclado);
                     break;
                 case 2:
-                    eliminarNumero(listaNumeros, scanner);
+                    eliminarNumero(listaNumeros, teclado);
                     break;
                 case 3:
                     mostrarNumeros(listaNumeros);
                     break;
                 case 4:
-                    comprobarNumero(listaNumeros, scanner);
+                    comprobarNumero(listaNumeros, teclado);
                     break;
                 case 5:
                     listaNumeros.clear();
@@ -43,15 +43,13 @@ public class Programa9 {
                 case 6:
                     System.out.println("El tamaño de la lista es: " + listaNumeros.size());
                     break;
-                case 7:
-                    System.out.println("¡Adiós!");
-                    break;
+               
                 default:
                     System.out.println("Opción no válida, por favor elige de nuevo.");
             }
         } while (opcion != 7);
         
-        scanner.close();
+        teclado.close();
     }
 
     // Función para agregar un número
@@ -70,9 +68,9 @@ public class Programa9 {
     }
 
     // Función para eliminar un número
-    public static void eliminarNumero(ArrayList<Integer> lista, Scanner scanner) {
+    public static void eliminarNumero(ArrayList<Integer> lista, Scanner teclado) {
         System.out.print("Introduce el número que deseas eliminar: ");
-        int numero = scanner.nextInt();
+        int numero = teclado.nextInt();
         
         // Eliminar todos los números iguales
         lista.removeIf(n -> n == numero);
@@ -93,9 +91,9 @@ public class Programa9 {
     }
 
     // Función para comprobar si un número está en la lista
-    public static void comprobarNumero(ArrayList<Integer> lista, Scanner scanner) {
+    public static void comprobarNumero(ArrayList<Integer> lista, Scanner teclado) {
         System.out.print("Introduce el número que deseas comprobar: ");
-        int numero = scanner.nextInt();
+        int numero = teclado.nextInt();
         
         if (lista.contains(numero)) {
             System.out.println("El número " + numero + " está en la lista.");

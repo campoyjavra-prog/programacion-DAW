@@ -8,11 +8,11 @@ public class Programa4 {
         int[] bonoloto = {3, 8, 14, 21, 28, 33};
 
         // Crear un objeto Scanner para leer la entrada del usuario
-        Scanner scanner = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
         
         // Solicitar al usuario que ingrese su número
         System.out.print("Introduce tu número: ");
-        int numeroUsuario = scanner.nextInt();
+        int numeroUsuario = teclado.nextInt();
 
         // Verificar si el número está en el array de bonoloto
         boolean esValido = false;

@@ -33,6 +33,6 @@ public class Programa8 {
     public static String quitarTildes(String texto) {
         // Normalizar el texto eliminando las tildes
         String normalizado = Normalizer.normalize(texto, Normalizer.Form.NFD);
-        return normalizado.replaceAll("[\\p{InCombiningDiacriticalMarks}]", "");
+        return normalizado.replaceAll("[{InCombiningDiacriticalMarks}]", "");
     }
 }
