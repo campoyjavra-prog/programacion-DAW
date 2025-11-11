@@ -64,6 +64,7 @@ header #enlaces {
 }
 main {
     flex-basis: 65%;
+    position: relative;
 }
 main section {
 
@@ -73,6 +74,7 @@ main section {
     flex-wrap: wrap;
 }
 main section article {
+    position: relative;
     border: 1px solid black;
     flex-basis: 24.5%;
     display: flex;
@@ -80,7 +82,7 @@ main section article {
     /* top left bottom right */
     /* distantia exterior */
     margin: 5px 0px 5px 0px ;
-
+    
     border-radius: 8px;
     /* distancia interior (relleno) al contenido */
     padding: 5px 10px 5px 10px;
@@ -96,24 +98,36 @@ main section article:hover{
 }
 
 main section article .envio{
+    position: absolute;
+    top: 50px;
+    left: 10px;
     background-color: rgb(202,78,148);
     border-radius: 5px;
     padding: 3px;
     color: white;
     font-weight: bold;
     width: 40%;
-
+ 
 }
 main section article figure{
+    flex-basis: 50%;
+    display: flex;
+    flex-direction: column;
+
+
+
 
 }
 main section article figure img{
+
     
 }
 main section article p{
 
+
 }
 main section article p{
+
 
 }
 
