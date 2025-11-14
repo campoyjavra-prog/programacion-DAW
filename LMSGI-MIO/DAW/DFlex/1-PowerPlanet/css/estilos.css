@@ -64,7 +64,6 @@ header #enlaces {
 }
 main {
     flex-basis: 65%;
-    position: relative;
 }
 main section {
 
@@ -72,6 +71,7 @@ main section {
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
+    border: 3px solid red;
 }
 main section article {
     position: relative;
@@ -79,10 +79,12 @@ main section article {
     flex-basis: 24.5%;
     display: flex;
     flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
     /* top left bottom right */
     /* distantia exterior */
     margin: 5px 0px 5px 0px ;
-    
+    height: 30vh; /* altura fija */
     border-radius: 8px;
     /* distancia interior (relleno) al contenido */
     padding: 5px 10px 5px 10px;
@@ -100,37 +102,53 @@ main section article:hover{
 main section article .envio{
     position: absolute;
     top: 50px;
-    left: 10px;
+    left: 10px;;
     background-color: rgb(202,78,148);
     border-radius: 5px;
     padding: 3px;
     color: white;
     font-weight: bold;
     width: 40%;
- 
+
 }
 main section article figure{
-    flex-basis: 50%;
+    border: 0px solid red;
+    flex-basis: 50%; /* height --> fdirection = column */
     display: flex;
     flex-direction: column;
-
-
-
-
+    justify-content: center;
+    align-items: center;
 }
 main section article figure img{
-
+    flex-basis: 100%;
     
 }
 main section article p{
-
-
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
-main section article p{
-
-
+main section article .valoraciones{
+    border: 1px solid red;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
 }
-
+main section article .valoraciones .star{
+    
+}
+main section article .valoraciones .star i{
+    color: yellow;
+    font-size: 10px;
+}
+main section article .valoraciones .nvaloraciones{
+    font-size: 10px;
+    font-weight: bold;
+}
+main section article .valoraciones .comentarios{
+    font-size: 10px;
+    font-weight: bold;
+}
 
 footer {
     flex-basis: 30%;
