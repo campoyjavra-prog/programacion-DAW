@@ -29,6 +29,7 @@ public class ActividadArrays1 {
     //Realizar la copia de un array
     //int[] vector=(3,6,8,11,33);
     //int[] copiaVector=
- }
+    
+   }
 
 }

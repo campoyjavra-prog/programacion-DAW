@@ -32,11 +32,15 @@ public class Persona {
 
     public static void main(String[] args) {
         Persona p=new Persona("12345678A","15/08/1985");
-            p.obtenerEdad();
-                System.out.println("Tienes "+p.hijos+" hijos");
+        p.obtenerEdad();
+        System.out.println("Tienes "+p.hijos+" hijos");
+
         Persona p2=new Persona("12345678B","01/07/1987");
-            p.hijos=3;
-                System.out.println("Tienes "+p2.hijos+" hijos");
+        p.hijos=3;
+        System.out.println("Tienes "+p2.hijos+" hijos");
+
+        
+
     }
 
 }
