@@ -1,4 +1,4 @@
-package Clases.administracion;
+package administracion;
 
 import didactica.Alumno;
 

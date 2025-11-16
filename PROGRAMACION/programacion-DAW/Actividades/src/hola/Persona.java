@@ -1,4 +1,4 @@
-package Clases.clases;
+package hola;
 
 public class Persona {
     String nombre;

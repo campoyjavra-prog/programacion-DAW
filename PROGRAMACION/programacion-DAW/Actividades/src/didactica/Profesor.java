@@ -1,4 +1,4 @@
-package Clases.didactica;
+package didactica;
 
 public class Profesor {
     String nombre;

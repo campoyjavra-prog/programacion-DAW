@@ -1,4 +1,4 @@
-package Clases;
+
 
 import prueba.Matematicas;
 import prueba.Persona;
