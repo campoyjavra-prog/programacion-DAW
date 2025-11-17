@@ -13,6 +13,6 @@ public class Actividad1Clases {
 
         System.out.println(Matematicas.suma(a,b));
 
-        System.out.println(p.nom);
+        
     }   
 }

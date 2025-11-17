@@ -1,7 +1,7 @@
-package Prueba;
+package prueba;
 
 public class Persona {
-    protected String nombre;
+     protected String nombre;
     int edad;
 
     public Persona(){

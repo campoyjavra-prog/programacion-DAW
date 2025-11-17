@@ -1,4 +1,4 @@
-package hola;
+package clases;
 
 public class Persona {
     String nombre;
@@ -40,6 +40,9 @@ public class Persona {
     }
 
     public void imprimePersona(){
-        System.out.println("Imprme persona");
+        System.out.println("Nombre: "+this.nombre);
+        System.out.println("DNI: "+this.DNI);
+        System.out.println("Fecha nacimiento: "+this.fecha);
+        System.out.println("Dirección: "+this.direccion);
     }
 }

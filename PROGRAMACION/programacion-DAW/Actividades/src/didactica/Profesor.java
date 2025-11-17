@@ -8,5 +8,6 @@ public class Profesor {
     public Profesor(){
         a.getNombre();
         
+        
     }
 }
