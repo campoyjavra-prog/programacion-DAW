@@ -1,12 +1,12 @@
 [
-  {
+  { 
     "id": 1,
     "nombre": "Cubot C45 AZUL - Reloj inteligente",
     "precio": 34.99,
     "precioOriginal": 499.99,
     "descuento": 50,
-    "imagen": "https://images.unsplash.com/photo-1606813902915-d23e25f5d2c1?w=500&auto=format&fit=crop",
-    "valoracion": 5.4,
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1086/10863849/1216-cubot-kingkong-star-2-5g-12-256gb-negro-libre.jpg",
+    "valoracion": 3,
     "opiniones": 0,
     "caracteristicas": {
       "cpu": "Chipset Realtek RTL8762C",
@@ -20,8 +20,8 @@
     "precio": 799.00,
     "precioOriginal": 959.00,
     "descuento": 17,
-    "imagen": "https://images.unsplash.com/photo-1603898037225-1be31a016f8e?w=500&auto=format&fit=crop",
-    "valoracion": 5,
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1085/10855024/117-apple-iphone-16-128gb-azul-ultramar-caracteristicas.jpg",
+    "valoracion": 2,
     "opiniones": 34,
     "caracteristicas": {
       "cpu": "Apple A18 Bionic",
@@ -35,7 +35,7 @@
     "precio": 999.00,
     "precioOriginal": 1180.00,
     "descuento": 15,
-    "imagen": "https://images.unsplash.com/photo-1610901357838-2e7b504fddf4?w=500&auto=format&fit=crop",
+    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1081/10814363/1499-samsung-galaxy-s24-ultra-12-256gb-negro-titanium-libre.jpg",
     "valoracion": 4.9,
     "opiniones": 87,
     "caracteristicas": {
