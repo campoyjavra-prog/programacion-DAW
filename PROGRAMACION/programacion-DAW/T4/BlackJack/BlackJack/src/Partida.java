@@ -85,4 +85,14 @@ public class Partida {
         dineroJugador -= cantidad;  // Se deduce la cantidad apostada
         return true;
     }
+
+    public int getDineroJugador() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getDineroJugador'");
+    }
+
+    public Object getJugador() {
+        // TODO Auto-generated method stub
+        throw new UnsupportedOperationException("Unimplemented method 'getJugador'");
+    }
 }

@@ -33,7 +33,7 @@
             <a href=#>
                 <i class="fa-solid fa-house"></i>
             </a> &gt;  
-            <a href="#">Smartphones</a> &gt;
+            <a href="http://127.0.0.1:5500/LMSGI-CLASE/DAW/DFlex/1-PowerPlanet/">Smartphones</a> &gt;
             <a href="#">Moviles</a> &gt;
             <a href="#">One Plus 13</a>
         </nav>
@@ -96,9 +96,19 @@
 <script>
     
 
-     fetch('./data/producto.json')
+    // 1-. Obtener los parametros de la URL 
+    const urlParmans = new URLSearchParams(window.location.search);
+    // 2-. Obtener el parametro 'id'
+    const idProd = parseInt(urlParmans.get('id'))
+    //comprobar que el id llega al detalle.html a traves de la URL
+    console.log ("--->", idProd)
+
+     fetch('./data/productos.json')
         .then(response => response.json())
-        .then ( producto => {
+        .then ( productos => {
+            //buscar producto en array productos
+            const producto = productos.find(p => p.id === idProd)
+            
             console.log("-1->",producto)
             console.log("-2->", producto.nombre, producto.precio)
            
@@ -109,7 +119,17 @@
             
             //cambiar portada
             document.getElementById('foto').setAttribute("src", producto.imagen);
-        })
 
+            // **** galeria dinamica ****
+            
+            const galeria = document.getElementById('thumbnails');
+            galeria.innerHTML='';
+            producto.galeria.forEach(img => {
+                let imagen = document.createElement('img');
+                imagen.setAttribute("src", img)
+                galeria.appendChild(imagen)
+            })
+        })
+    
        
 </script>

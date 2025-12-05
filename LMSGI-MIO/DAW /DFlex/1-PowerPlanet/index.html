@@ -190,6 +190,7 @@
                 const tarjeta = document.createElement('article');
                 // Generar estrellas según la valoración (0–5)
                
+    //******* generación de estrellas de forma dinamica ********
                 //codigo JS para generar dinamicax el numero de estrellas
                 //en funcion del campo valoracion del producto
                 const maxEstrellas = 5; //crear una constante (maxEstrellas no cambia)
@@ -222,7 +223,13 @@
                         <span class="comentarios">(${producto.opiniones} opiniones)</span>
                     </div>
                 `;
-                contSeccion.appendChild(tarjeta)
+                contSeccion.appendChild(tarjeta);
+
+                 //******* añadimos un enlace a cada producto a su detalle ********
+                tarjeta.addEventListener('click', () => {
+                    window.location.href = `detalle.html?id=${producto.id}`;
+                });
+
             })
         })
 </script>

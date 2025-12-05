@@ -99,33 +99,38 @@ main aside{
     flex-direction: column;
     flex-wrap: nowrap;
 }
-
 main div#vistos {
     background-color: red;
+    /* flexbasic =  height pq la propiedad flex-direction = column */
     flex-basis: 33.3%;
+    order: 3;
 }
 main div#baratos {
-    background-color: green;
+    background-color: green;;
     flex-basis: 33.3%;
+    order: 1;
 }
 main div#ofertas {
-    background-color: yellow;
+    background-color: yellow;;
     flex-basis: 33.4%;
+    order:2;
 }
 
 footer {
     height: 10vh;
     background-color: gray;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: nowrap;
+    display: flex; /* contenedor flexible */
+    flex-direction: row-reverse; /* eje ppal : fila */
+    flex-wrap: nowrap; /* en la misma fila/linea */
+
 }
 footer nav{
     background-color: aqua;
-    flex-basis: 20%;
-
-
-
-
-    
+    /* tamaño ancho o al */
+    /* flexbasic =  width pq la propiedad flex-direction = row */ 
+    flex-basis: 50%;
+}
+footer div {
+    background-color: antiquewhite;
+    flex-basis: 50%;
 }

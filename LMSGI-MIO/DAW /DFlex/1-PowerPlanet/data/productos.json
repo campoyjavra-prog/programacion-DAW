@@ -5,14 +5,20 @@
     "precio": 34.99,
     "precioOriginal": 499.99,
     "descuento": 50,
-    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1086/10863849/1216-cubot-kingkong-star-2-5g-12-256gb-negro-libre.jpg",
+    "imagen": "https://www.powerplanetonline.com/cdnassets/Cubot-A30-gris-001_l.jpg",
     "valoracion": 3,
     "opiniones": 0,
     "caracteristicas": {
       "cpu": "Chipset Realtek RTL8762C",
       "ram": "256 MB",
       "disco": "512 MB"
-    }
+    },
+    "galeria": [
+      "https://www.powerplanetonline.com/cdnassets/Cubot-A30-gris-001_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Cubot-A30-gris-002_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Cubot-A30-gris-003_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/Cubot-A30-rosa-004_ad_l.jpg"
+    ]
   },
   {
     "id": 2,
@@ -27,7 +33,14 @@
       "cpu": "Apple A18 Bionic",
       "ram": "8 GB",
       "disco": "128 GB"
-    }
+    },
+    "galeria": [
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_01_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_02_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_03_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_04_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/apple_iphone_16_azul_05_ad_l.jpg"
+    ]
   },
   {
     "id": 3,
@@ -35,14 +48,21 @@
     "precio": 999.00,
     "precioOriginal": 1180.00,
     "descuento": 15,
-    "imagen": "https://thumb.pccomponentes.com/w-530-530/articles/1081/10814363/1499-samsung-galaxy-s24-ultra-12-256gb-negro-titanium-libre.jpg",
+    "imagen": "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_01_l.jpg",
     "valoracion": 4.9,
     "opiniones": 87,
     "caracteristicas": {
       "cpu": "Snapdragon 8 Gen 3",
       "ram": "12 GB",
       "disco": "256 GB"
-    }
+    },
+    "galeria":[
+      "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_01_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_02_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_03_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_04_ad_l.jpg",
+      "https://www.powerplanetonline.com/cdnassets/samsung_galaxy_s24_ultra_5g_negro_05_ad_l.jpg"
+    ]
   },
   {
     "id": 4,
