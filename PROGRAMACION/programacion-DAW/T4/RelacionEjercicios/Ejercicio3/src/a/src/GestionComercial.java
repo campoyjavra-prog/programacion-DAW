@@ -22,10 +22,26 @@ class Fabrica {
         this.gerente = gerente;
     }
 
+    public String getCuit() {
+        return cuit;
+    }
+
+    public String getPais() {
+        return pais;
+    }
+
+    public int getCantEmp() {
+        return cantEmp;
+    }
+
+    public String getGerente() {
+        return gerente;
+    }
+
     public String getNombre() {
         return nombre;
     }
-    
+
     // Método para representar la fábrica como texto
     public String toString() {
         return "Fábrica [" + nombre + " - País: " + pais + "]";
@@ -49,8 +65,16 @@ class Producto {
         this.fabrica = fabrica;
     }
 
+    public int getCodigo() {
+        return codigo;
+    }
+
     public String getDescripcion() {
         return descripcion;
+    }
+
+    public String getColor() {
+        return color;
     }
 
     public double getCosto() {
@@ -77,10 +101,22 @@ class Tarjeta {
         this.fechaVenc = fechaVenc;
     }
 
+    public String getNombreTitular() {
+        return nombreTitular;
+    }
+
+    public int getCodigoSeguridad() {
+        return codigoSeguridad;
+    }
+
+    public String getFechaVenc() {
+        return fechaVenc;
+    }
+
     public String getNumero() {
         return numero;
     }
-    
+
     @Override
     public String toString() {
         return "Visa/Mastercard terminada en " + numero;
@@ -88,14 +124,15 @@ class Tarjeta {
 }
 
 // 4. Clase CLIENTE
-// El cliente tiene una lista de tarjetas (relación 1:n) y puede comprar en sucursales
+// El cliente tiene una lista de tarjetas (relación 1:n) y puede comprar en
+// sucursales
 class Cliente {
     private int codigo;
     private String nombre;
     private String ciudad;
     private String dni;
     private String fechaNac;
-    
+
     // Lista para almacenar las tarjetas del cliente
     private ArrayList<Tarjeta> misTarjetas;
 
@@ -112,7 +149,23 @@ class Cliente {
     public void agregarTarjeta(Tarjeta t) {
         misTarjetas.add(t);
     }
-    
+
+    public int getCodigo() {
+        return codigo;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public String getFechaNac() {
+        return fechaNac;
+    }
+
     public String getNombre() {
         return nombre;
     }
@@ -127,11 +180,11 @@ class Cliente {
         System.out.println("Cliente: " + this.nombre);
         System.out.println("Sucursal: " + sucursal.getCiudad());
         System.out.println("Producto: " + prod.getDescripcion());
-        
+
         // El precio de venta suele ser mayor al costo, aquí simulamos un precio final
-        double precioVenta = prod.getCosto() * 1.5; 
+        double precioVenta = prod.getCosto() * 1.5;
         double precioFinal = precioVenta - descuento;
-        
+
         System.out.println("Precio lista: $" + precioVenta);
         System.out.println("Descuento aplicado: -$" + descuento);
         System.out.println("TOTAL A PAGAR: $" + precioFinal);
@@ -140,18 +193,31 @@ class Cliente {
 }
 
 // 5. Clase Auxiliar DOMICILIO (Para Empleado)
-// El diagrama muestra domicilio con atributos compuestos (calle, numero, ciudad)
+// El diagrama muestra domicilio con atributos compuestos (calle, numero,
+// ciudad)
 class Domicilio {
-    String calle;
-    int numero;
-    String ciudad;
+    private String calle;
+    private int numero;
+    private String ciudad;
 
     public Domicilio(String calle, int numero, String ciudad) {
         this.calle = calle;
         this.numero = numero;
         this.ciudad = ciudad;
     }
-    
+
+    public String getCalle() {
+        return calle;
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getCiudad() {
+        return ciudad;
+    }
+
     @Override
     public String toString() {
         return calle + " " + numero + ", " + ciudad;
@@ -163,8 +229,8 @@ class Empleado {
     private int legajo;
     private String dni;
     private String nombre;
-    private Domicilio domicilio; 
-    private ArrayList<String> telefonos; 
+    private Domicilio domicilio;
+    private ArrayList<String> telefonos;
 
     public Empleado(int legajo, String dni, String nombre, Domicilio domicilio) {
         this.legajo = legajo;
@@ -178,10 +244,26 @@ class Empleado {
         telefonos.add(tel);
     }
 
+    public int getLegajo() {
+        return legajo;
+    }
+
+    public String getDni() {
+        return dni;
+    }
+
+    public Domicilio getDomicilio() {
+        return domicilio;
+    }
+
+    public ArrayList<String> getTelefonos() {
+        return telefonos;
+    }
+
     public String getNombre() {
         return nombre;
     }
-    
+
     public String getInfo() {
         return nombre + " (Legajo: " + legajo + ")";
     }
@@ -190,12 +272,12 @@ class Empleado {
 // 7. Clase SUCURSAL
 class Sucursal {
     private int numero;
-    private String domicilio; 
+    private String domicilio;
     private String ciudad;
-    
+
     // Relación con Empleados (1:n)
     private ArrayList<Empleado> listaEmpleados;
-    
+
     // Inventario de productos disponibles (Relación vende)
     private ArrayList<Producto> stockProductos;
 
@@ -207,16 +289,33 @@ class Sucursal {
         this.stockProductos = new ArrayList<>();
     }
 
-    // Método para registrar la relación "Trabaja" 
+    // Método para registrar la relación "Trabaja"
     public void contratarEmpleado(Empleado e, String horario, String dia) {
         // En un sistema real crearíamos una clase intermedia, pero aquí lo simulamos
         listaEmpleados.add(e);
-        System.out.println("RRHH: Empleado " + e.getNombre() + " asignado a sucursal " + this.ciudad + " [" + dia + " - " + horario + "]");
+        System.out.println("RRHH: Empleado " + e.getNombre() + " asignado a sucursal " + this.ciudad + " [" + dia
+                + " - " + horario + "]");
     }
 
     // Método para añadir productos que la sucursal "vende"
     public void agregarProductoStock(Producto p) {
         stockProductos.add(p);
+    }
+
+    public int getNumero() {
+        return numero;
+    }
+
+    public String getDomicilio() {
+        return domicilio;
+    }
+
+    public ArrayList<Empleado> getListaEmpleados() {
+        return listaEmpleados;
+    }
+
+    public ArrayList<Producto> getStockProductos() {
+        return stockProductos;
     }
 
     public String getCiudad() {
