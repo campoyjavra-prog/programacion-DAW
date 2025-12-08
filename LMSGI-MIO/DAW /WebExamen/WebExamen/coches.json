@@ -1,0 +1,44 @@
+[
+    {
+        "id": 1,
+        "marca": "Toyota",
+        "modelo": "Corolla",
+        "precio": 25000,
+        "imagen": "https://scene7.toyota.eu/is/image/toyotaeurope/review-nuevo-corolla?wid=1280&fit=fit,1&ts=0&resMode=sharp2&op_usm=1.75,0.3,2,0"
+    },
+    {
+        "id": 2,
+        "marca": "Honda",
+        "modelo": "Civic",
+        "precio": 27500,
+        "imagen": "https://fotos.quecochemecompro.com/honda-civic/40694624.jpg?size=750x400"
+    },
+    {
+        "id": 3,
+        "marca": "Ford",
+        "modelo": "Mustang",
+        "precio": 45000,
+        "imagen": "https://www.ford.es/content/dam/guxeu/rhd/central/cars/S650-Mustang/my26/column_cards/ford-eu-S650_Nite_Pony_CG_Thumbnail_1000x667.jpg"
+    },
+    {
+        "id": 4,
+        "marca": "Tesla",
+        "modelo": "Model 3",
+        "precio": 35000,
+        "imagen": "https://www.muchoneumatico.com/blog/wp-content/uploads/2022/02/Un-Tesla-Model-3-de-color-blanco-scaled.jpg"
+    },
+    {
+        "id": 5,
+        "marca": "Chevrolet",
+        "modelo": "Camaro",
+        "precio": 42000,
+        "imagen": "https://okdiario.com/img/motor/2016/06/10/chevrolet-camaro-transformers-the-last-knight.jpg"
+    },
+    {
+        "id": 6,
+        "marca": "BMW",
+        "modelo": "Serie 3",
+        "precio": 48000,
+        "imagen": "https://www.bmwautomotor.com/wp-content/uploads/2018/09/serie3_3.webp"
+    }
+]
