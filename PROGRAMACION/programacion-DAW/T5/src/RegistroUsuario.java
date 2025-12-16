@@ -17,7 +17,7 @@ public class RegistroUsuario {
     public static void main(String[] args) {
         RegistroUsuario registro = new RegistroUsuario();
         try {
-            registro.registrarUsuario("Ana", 16); // lanza excepción
+            RegistroUsuario.registrarUsuario("Ana", 16); // lanza excepción
         } catch (EdadInvalidaException e) {
             System.out.println("Error: " + e.getMessage());
         }
