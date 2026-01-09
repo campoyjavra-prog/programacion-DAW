@@ -1,0 +1,4 @@
+Hola mundo
+este es un archivo de prueba
+para la actividad 4 de programacion
+mundo mundo hola

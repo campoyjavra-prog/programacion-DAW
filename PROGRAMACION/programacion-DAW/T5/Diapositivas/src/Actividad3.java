@@ -2,7 +2,7 @@ import java.io.BufferedWriter;
 import java.io.FileWriter;
 import java.io.IOException;
 
-public class Actividad3 {
+public class Actividad3 { //ACTIVIDAD LecturaEscritura.java
     public static void main(String[] args) {
         String contenido = "Este es un ejemplo de uso de BufferedWriter en Java.";
         try {

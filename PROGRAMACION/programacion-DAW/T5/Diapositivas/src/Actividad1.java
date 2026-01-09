@@ -3,7 +3,7 @@ import java.io.File;
 import java.io.FileReader;
 import java.util.Scanner;
 
-public class Actividad1 {
+public class Actividad1 { //ACTIVIDAD Escritura.java o RegistroUsuario o Tema5
     public static void main(String[] args) throws Exception {
         File archivo = null;
         FileReader reader = null;

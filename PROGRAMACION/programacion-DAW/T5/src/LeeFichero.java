@@ -10,7 +10,7 @@ class LeeFichero{
         BufferedReader buffer = null;
 
         try{
-            // System.out.println("Directorio actual: " + new File(".").getAbsolutePath());
+            System.out.println("Directorio actual: " + new File(".").getAbsolutePath());
             archivo = new File ("./PROGRAMACION/programacion-DAW/T5/numeros.txt");
             reader = new FileReader(archivo);
             buffer = new BufferedReader(reader);
