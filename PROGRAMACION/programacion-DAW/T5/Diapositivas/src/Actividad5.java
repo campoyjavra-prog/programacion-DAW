@@ -1,42 +1,44 @@
 
-// 2) Implementa una clase que lee el contenido de un fichero, cuya ruta le
-// indicas por teclado, y lo escribe en otro fichero con el mismo nombre y
-// añadiendo copia y fecha. Ejemplo: fichero→fichero_copia_yyyy_mm_dd.txt.
-// Recuerda usar LocalDate.now() y que para sacar el nombre sin la extensión puedes usar nombre.substring(0,nombre.lastIndexOf('.'));
+// 1) Implementa una clase que lee el contenido de un fichero, solicita una
+// palabra por teclado y dice cuántas veces aparece en el texto. Utiliza
+// split("\\s+") para separar por uno o varios espacios.
 
-import java.util.Scanner;
-import java.time.LocalDate;
-import java.time.format.DateTimeFormatter;
 import java.io.BufferedReader;
 import java.io.FileReader;
-import java.io.BufferedWriter;
-import java.io.FileWriter;
+import java.io.IOException;
+import java.util.Scanner;
 
 public class Actividad5 {
     public static void main(String[] args) {
+
+        String nombreFichero = "prueba.txt";
+
         Scanner scanner = new Scanner(System.in);
-        System.out.print("Introduce la ruta del fichero: ");
-        String rutaFichero = scanner.nextLine();
-        scanner.close();
+        System.out.print("Introduce la palabra a buscar: ");
+        String palabraBuscada = scanner.next();
 
-        String nombreFichero = rutaFichero.substring(rutaFichero.lastIndexOf('/') + 1);
-        String nombreSinExtension = nombreFichero.substring(0, nombreFichero.lastIndexOf('.'));
-        String fecha = LocalDate.now().format(DateTimeFormatter.ofPattern("yyyy_MM_dd"));
-        String nombreCopia = nombreSinExtension + "_copia_" + fecha + ".txt";
+        int contador = 0;
 
-        try {
-            BufferedReader reader = new BufferedReader(new FileReader(rutaFichero));
-            BufferedWriter writer = new BufferedWriter(new FileWriter(nombreCopia));
+        try (BufferedReader buffer = new BufferedReader(new FileReader(nombreFichero))) {
             String linea;
-            while ((linea = reader.readLine()) != null) {
-                writer.write(linea);
-                writer.newLine();
+            while ((linea = buffer.readLine()) != null) {
+                // Separamos por uno o varios espacios
+                String[] palabras = linea.toLowerCase().split("\\s+");
+
+                for (String palabra : palabras) {
+                    if (palabra.equals(palabraBuscada)) {
+                        contador++;
+                    }
+                }
             }
-            reader.close();
-            writer.close();
-            System.out.println("Fichero copiado correctamente.");
-        } catch (Exception e) {
-            System.out.println("Error: " + e.getMessage());
+
+            System.out.println("La palabra '" + palabraBuscada + "' aparece " + contador + " veces en el texto.");
+
+        } catch (IOException e) {
+            System.out.println("Error al leer el fichero: " + e.getMessage());
+            System.out.println("Asegúrate de que el archivo '" + nombreFichero + "' existe.");
+        } finally {
+            scanner.close();
         }
     }
 }
