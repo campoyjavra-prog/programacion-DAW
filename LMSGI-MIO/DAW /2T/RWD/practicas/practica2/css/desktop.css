@@ -1,0 +1,30 @@
+header {
+    /* puedo tener los hijos en varias filas 
+        basandose en flex basis de cada hijo y el order
+    */
+    flex-wrap: wrap;
+}
+
+header h1 {
+    flex-basis: 70%;
+    order: 1;
+}
+
+header figure {
+    display: block;
+
+}
+
+header nav {
+    flex-basis: 100%;
+    order: 3;
+    border: 0px solid yellow;
+    display: flex;
+    justify-content: space-around;
+
+}
+
+header button {
+    flex-basis: 15%;
+    order: 2;
+}

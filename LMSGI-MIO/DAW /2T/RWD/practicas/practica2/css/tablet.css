@@ -1,0 +1,16 @@
+header {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header nav {
+    flex-direction: row;
+    gap: 45px;
+    border: 0px solid blue;
+
+}
+
+header nav a {
+    border-radius: 5px;
+}

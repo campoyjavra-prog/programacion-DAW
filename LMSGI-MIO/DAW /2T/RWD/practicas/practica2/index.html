@@ -1,15 +1,32 @@
-<!DOCTYPE html> 
-<html lang="es">                                                                            
-<head>               
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Responsive Web Design con Mobile First</title> 
+    <title>Responsive Web Design con Mobile First</title>
+    <!-- Siempre se carga primero el CSS para móviles -->
+    <link rel="stylesheet" href="css/movil.css">
+    <!-- Luego se cargan los CSS para tablets -->
+    <link rel="stylesheet" href="css/tablet.css" media="screen and (min-width: 768px)">
+    <!-- Finalmente se cargan los CSS para ordenadores de escritorio -->
+    <link rel="stylesheet" href="css/desktop.css" media="screen and (min-width: 1024px)">
+</head>
 
-    <!--Se carga primero el css para moviles-->
-    <link rel="stylesheet" type="text/css" href="./css/movil.css"> 
-     <!--Se cargan los css para tablets-->
-    <link rel="stylesheet" type="text/css" href="./css/tablet.css" media="screen and (min-width: 768px)"> 
-    <!--Finalmente los css se cambian para escritorio-->
-    <link rel="stylesheet" type="text/css" href="./css/desktop.css" media="screen and (min-width: 1024px)"> 
+<body>
+    <header>
+        <h1>Mi sitio web</h1>
+        <figure>
+            <img src="img/download.png">
+        </figure>
+        <nav>
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Acerca de</a>
+            <a href="#">Contacto</a>
+        </nav>
+        <button>Registrarse</button>
+    </header>
+</body>
 
-</head> 
+</html>
