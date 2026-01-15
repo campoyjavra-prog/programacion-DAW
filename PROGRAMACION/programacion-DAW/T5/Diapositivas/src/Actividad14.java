@@ -36,6 +36,6 @@ public class Actividad14 {
         }
 
         // Mostrar resultados
-        System.out.println("Frecuencia de marcas de coches: " + recuento);
+        System.out.println("Se repiten las marcas de coches: " + recuento);
     }
 }
