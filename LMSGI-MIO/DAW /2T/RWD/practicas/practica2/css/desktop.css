@@ -1,30 +1,31 @@
-header {
-    /* puedo tener los hijos en varias filas 
-        basandose en flex basis de cada hijo y el order
-    */
-    flex-wrap: wrap;
+body section {
+    flex-wrap: nowrap;
+    justify-content: space-between;
 }
 
-header h1 {
-    flex-basis: 70%;
+body section nav {
+    flex-basis: 23%;
     order: 1;
 }
 
-header figure {
-    display: block;
+body section main {
+    flex-basis: 50%;
+    order: 2;
+    padding-left: 20px;
+    padding-right: 20px;
+}
 
+body section aside {
+    flex-basis: 23%;
+    order: 3;
+    margin-left: 0;
+    margin-top: 0;
+}
+
+header {
+    padding: 20px 40px;
 }
 
 header nav {
-    flex-basis: 100%;
-    order: 3;
-    border: 0px solid yellow;
-    display: flex;
-    justify-content: space-around;
-
-}
-
-header button {
-    flex-basis: 15%;
-    order: 2;
+    gap: 30px;
 }

@@ -15,7 +15,7 @@
 
 <body>
     <header>
-        <h1>Mi sitio web</h1>
+        <h1>Mi Sitio Web</h1>
         <figure>
             <img src="img/download.png">
         </figure>
@@ -27,6 +27,65 @@
         </nav>
         <button>Registrarse</button>
     </header>
+
+    <section class="container">
+        <nav class="menu-lateral">
+            <h3>Menú Lateral</h3>
+            <ul>
+                <li><a href="#">📂 Categoria 1</a></li>
+                <li><a href="#">📂 Categoria 2</a></li>
+                <li><a href="#">📂 Categoria 3</a></li>
+                <li><a href="#">📂 Categoria 4</a></li>
+                <li><a href="#">⚙️ Configuración</a></li>
+            </ul>
+        </nav>
+
+        <main class="contenido-principal">
+            <h2>Contenido Principal</h2>
+            <h3>Responsive Web Design con Mobile First</h3>
+            <p>Este diseño adapta su estructura según el tamaño de la pantalla:</p>
+            <ul>
+                <li>📱 <strong>Móvil (< 768px):</strong> Layout vertical, todo en columna</li>
+                <li>Tableta <strong>Tablet (768px - 1023px):</strong> Grid 2 columnas, menú lateral + contenido/aside
+                    apilados</li>
+                <li>💻 <strong>Desktop (≥ 1024px):</strong> Grid 3 columnas, todas visibles simultáneamente</li>
+            </ul>
+            <p>Los estilos se cargan en cascada: primero móvil (base), luego tablet, finalmente desktop.</p>
+            <p>Esta estructura utiliza tres archivos CSS separados en la carpeta css/:</p>
+            <ul>
+                <li><code>movil.css</code> - Estilos base para todos los dispositivos</li>
+                <li><code>tablet.css</code> - Estilos adicionales para tablets (≥768px)</li>
+                <li><code>desktop.css</code> - Estilos adicionales para escritorio (≥1024px)</li>
+            </ul>
+        </main>
+
+        <aside class="informacion-adicional">
+            <h3>Información Adicional</h3>
+            <p>Este es el área de contenido complementario que puede contener:</p>
+            <ul>
+                <li>Publicidad</li>
+                <li>Enlaces relacionados</li>
+                <li>Widgets</li>
+                <li>Noticias destacadas</li>
+            </ul>
+        </aside>
+    </section>
+
+    <footer>
+        <section class="social">
+            <h3>Siguenos</h3>
+            <a href="#">Facebook</a>
+            <a href="#">Twitter</a>
+            <a href="#">Instagram</a>
+            <a href="#">LinkedIn</a>
+        </section>
+        <section class="contacto">
+            <h3>Contacto</h3>
+            <p>📧 info@misitio.com</p>
+            <p>📞 +34 123 456 789</p>
+            <p>📍 Madrid, España</p>
+        </section>
+    </footer>
 </body>
 
 </html>
