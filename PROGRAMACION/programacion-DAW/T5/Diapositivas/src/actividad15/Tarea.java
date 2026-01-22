@@ -7,7 +7,7 @@ import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
 import org.json.simple.parser.JSONParser;
 
-public class Actividad15 {
+public class Tarea {
 
     public static void main(String[] args) {
 

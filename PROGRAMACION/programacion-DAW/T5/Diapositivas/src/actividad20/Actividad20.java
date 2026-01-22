@@ -3,34 +3,43 @@ package actividad20;
 public class Actividad20 {
 
     public static void main(String[] args) {
+        // Caja solo para Circulos
+        CajaFiguras<Circulo> cajaCirculos = new CajaFiguras<>();
+        
+        // Añadimos varios circulos
+        cajaCirculos.guardar(new Circulo("Circulo1", 5));
+        cajaCirculos.guardar(new Circulo("Circulo2", 3));
+        cajaCirculos.guardar(new Circulo("Circulo3", 7));
 
-        // Creamos objetos de los vehiculos
-        Coche miCoche = new Coche();
-        Barco miBarco = new Barco();
-        Avion miAvion = new Avion();
+        // Caja solo para Rectangulos
+        CajaFiguras<Rectangulo> cajaRectangulos = new CajaFiguras<>();
+        
+        // Añadimos varios rectangulos
+        cajaRectangulos.guardar(new Rectangulo("Rectangulo1", 4, 6));
+        cajaRectangulos.guardar(new Rectangulo("Rectangulo2", 5, 8));
+        cajaRectangulos.guardar(new Rectangulo("Rectangulo3", 3, 5));
 
-        // 1. Array de Movible
-        Movible[] movibles = new Movible[3];
-        movibles[0] = miCoche;
-        movibles[1] = miBarco;
-        movibles[2] = miAvion;
+        // Caja general para cualquier Figura
+        CajaFiguras<Figura> cajaGeneral = new CajaFiguras<>();
+        
+        // Añadimos circulos y rectangulos
+        cajaGeneral.guardar(new Circulo("CirculoGeneral1", 4));
+        cajaGeneral.guardar(new Rectangulo("RectanguloGeneral1", 6, 9));
+        cajaGeneral.guardar(new Circulo("CirculoGeneral2", 6));
 
-        System.out.println("--- MOVIENDO VEHICULOS ---");
-        for (int i = 0; i < movibles.length; i++) {
-            movibles[i].mover();
-        }
+        // Mostramos contenido y area total de cada caja
+        System.out.println("=== CAJA DE CIRCULOS ===");
+        cajaCirculos.mostrarContenido();
+        System.out.println("Area total: " + cajaCirculos.calcularAreaTotal());
+        System.out.println();
 
-        System.out.println(); // Salto de linea
+        System.out.println("=== CAJA DE RECTANGULOS ===");
+        cajaRectangulos.mostrarContenido();
+        System.out.println("Area total: " + cajaRectangulos.calcularAreaTotal());
+        System.out.println();
 
-        // 2. Array de Sonoro
-        Sonoro[] sonoros = new Sonoro[3];
-        sonoros[0] = miCoche;
-        sonoros[1] = miBarco;
-        sonoros[2] = miAvion;
-
-        System.out.println("--- EMITIENDO SONIDOS ---");
-        for (int i = 0; i < sonoros.length; i++) {
-            sonoros[i].emitirSonido();
-        }
+        System.out.println("=== CAJA GENERAL ===");
+        cajaGeneral.mostrarContenido();
+        System.out.println("Area total: " + cajaGeneral.calcularAreaTotal());
     }
 }
