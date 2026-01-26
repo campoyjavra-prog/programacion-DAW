@@ -102,6 +102,5 @@ public class Ejercicio1 {
         
         //Sumar todas las variables y dar un total (aplicar descuento si es necesario * 0.9) e imprimir A pagar y el dinero correspondiente
 
-
     }
 }
