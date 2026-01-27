@@ -1,0 +1,50 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: grey;
+    padding: 10px;
+    display: grid;
+    grid-template-areas: none;
+
+    grid-template-columns: 2fr 6fr 2fr;
+    grid-template-rows: 50px 50px 100px 100px 200px;
+}
+
+header nav.sociales {
+    background-color: aquamarine;
+    padding: 5px;
+    grid-area: navSociales;
+}
+
+header nav.login {
+    background-color: rosybrown;
+    padding: 5px;
+    grid-area: loginTfno;
+}
+
+header figure {
+    background-color: orange;
+    padding: 5px;
+    grid-area: Logo;
+}
+
+header div.titulos {
+    background-color: blue;
+    padding: 5px;
+    grid-area: Titulos;
+}
+
+header i.fa-bars {
+    font-size: 30px;
+    grid-area: fab;
+}
+
+header nav.menu-ppal {
+    background-color: aqua;
+    padding: 5px;
+    grid-area: MenuPpal;
+}
