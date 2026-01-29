@@ -1,0 +1,77 @@
+/* Tablet Layout: 768px and up */
+
+body>header {
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+/* Row 1: Contact & Social */
+body>header>nav:nth-of-type(2) {
+    order: 1;
+    flex-basis: 60%;
+    text-align: left;
+    padding-left: 20px;
+}
+
+body>header>nav:nth-of-type(1) {
+    order: 2;
+    flex-basis: 40%;
+    text-align: right;
+    padding-right: 20px;
+}
+
+/* Row 2: Logo & Title (Left) + Address (Right) */
+body>header>figure {
+    order: 3;
+    flex-basis: 15%;
+    text-align: center;
+}
+
+body>header>hgroup {
+    order: 4;
+    flex-basis: 35%;
+    text-align: left;
+    padding-left: 10px;
+    margin-top: 20px;
+}
+
+body>header>address {
+    order: 5;
+    flex-basis: 50%;
+    justify-content: flex-end;
+    padding-right: 20px;
+    margin-top: 10px;
+}
+
+body>header>address>button {
+    width: auto;
+    margin-left: 10px;
+}
+
+/* Burger menu hidden (Direct Child) */
+/* This now properly overrides the mobile rule for the specific burger icon */
+body>header>i {
+    display: none !important;
+}
+
+/* Main Navigation */
+body>header>nav:nth-of-type(3) {
+    order: 7;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 10px;
+}
+
+body>header>nav:nth-of-type(3)>a {
+    text-decoration: none;
+    color: #5500aa;
+    font-size: 1.1rem;
+    font-weight: bold;
+}
+
+body>header>nav:nth-of-type(3)>a::after {
+    content: none;
+}

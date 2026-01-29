@@ -1,0 +1,152 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #E6E6FA;
+    font-family: 'Roboto', sans-serif;
+}
+
+body>header {
+    background-color: #E6E6FA;
+    padding: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* 
+   nav (sociales) -> nav:nth-of-type(1)
+   nav (login)    -> nav:nth-of-type(2)
+   figure         -> figure
+   hgroup         -> hgroup
+   address        -> address
+   i              -> i (DIRECT CHILD ONLY)
+   nav (menu)     -> nav:nth-of-type(3)
+*/
+
+/* Social Icons */
+body>header>nav:nth-of-type(1) {
+    order: 1;
+    flex-basis: 100%;
+    text-align: center;
+    color: #555;
+    padding: 5px;
+}
+
+body>header>nav:nth-of-type(1)>i {
+    margin: 0 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+}
+
+/* Login/Phone */
+body>header>nav:nth-of-type(2) {
+    order: 2;
+    flex-basis: 100%;
+    text-align: center;
+    color: #5500aa;
+    padding: 5px;
+    font-weight: bold;
+}
+
+body>header>nav:nth-of-type(2)>i {
+    margin-right: 5px;
+}
+
+/* Logo */
+body>header>figure {
+    order: 3;
+    flex-basis: 25%;
+    text-align: center;
+    padding: 10px 0;
+}
+
+body>header>figure>img {
+    max-width: 150px;
+}
+
+/* Title */
+body>header>hgroup {
+    order: 4;
+    flex-basis: 75%;
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+body>header>hgroup>h1 {
+    font-family: 'Merriweather', serif;
+    font-size: 1.8rem;
+    font-weight: 900;
+}
+
+body>header>hgroup>h2 {
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: -5px;
+}
+
+/* Address */
+body>header>address {
+    order: 5;
+    flex-basis: 85%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+body>header>address>button {
+    background-color: #dcdcdc;
+    border: none;
+    padding: 10px 15px;
+    color: #333;
+    font-family: sans-serif;
+    border-radius: 3px;
+    width: 45%;
+    min-width: 130px;
+}
+
+/* Burger Menu - DIRECT CHILD ONLY */
+body>header>i {
+    order: 6;
+    flex-basis: 15%;
+    text-align: center;
+    font-size: 2.5rem;
+    /* Only applies to the burger now */
+    color: #555;
+    padding-right: 0;
+    cursor: pointer;
+}
+
+/* Main Navigation */
+body>header>nav:nth-of-type(3) {
+    order: 7;
+    flex-basis: 100%;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    padding-left: 20px;
+}
+
+body>header>nav:nth-of-type(3)>a {
+    text-decoration: none;
+    color: #5500aa;
+    padding: 8px 0;
+    font-size: 1.1rem;
+    display: flex;
+    justify-content: space-between;
+}
+
+body>header>nav:nth-of-type(3)>a::after {
+    content: '\f107';
+    /* FontAwesome down arrow */
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-right: 20px;
+}

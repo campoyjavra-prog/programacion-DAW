@@ -1,0 +1,140 @@
+/* Desktop Layout: 1024px and up */
+
+body>header {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+}
+
+/* --- Group 1: Branding (Left) --- */
+
+/* Logo */
+body>header>figure {
+    order: 1;
+    flex-basis: auto;
+    padding-right: 15px;
+    text-align: left;
+}
+
+body>header>figure>img {
+    max-width: 80px;
+}
+
+/* Title */
+body>header>hgroup {
+    order: 2;
+    flex-basis: auto;
+    text-align: left;
+    margin-right: auto;
+}
+
+/* --- Group 2: Social & Login (Right) --- */
+
+/* Social Icons */
+body>header>nav:nth-of-type(1) {
+    order: 3;
+    flex-basis: auto;
+    text-align: right;
+    padding: 0 15px;
+    background-color: transparent;
+}
+
+body>header>nav:nth-of-type(1)>i {
+    margin: 0 8px;
+    color: #555;
+    font-size: 1.1rem;
+}
+
+/* Login */
+body>header>nav:nth-of-type(2) {
+    order: 4;
+    flex-basis: auto;
+    text-align: right;
+    background-color: transparent;
+}
+
+/* Hide parts for Desktop */
+body>header>nav:nth-of-type(2)>span:nth-of-type(1) {
+    display: none;
+}
+
+body>header>nav:nth-of-type(2)>span:nth-of-type(2) {
+    display: inline-block;
+    color: #5500aa;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+/* Hide Address */
+body>header>address {
+    display: none;
+}
+
+/* Hide Burger (Direct Child) */
+body>header>i {
+    display: none !important;
+}
+
+/* --- Group 3: Navigation (Bottom Row) --- */
+
+body>header>nav:nth-of-type(3) {
+    order: 5;
+    flex-basis: 100%;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 60px;
+
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+body>header>nav:nth-of-type(3)>a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: #5500aa;
+    font-size: 1.2rem;
+    font-family: sans-serif;
+    text-decoration: none;
+}
+
+body>header>nav:nth-of-type(3)>a::after {
+    content: none;
+}
+
+/* Icons via CSS */
+body>header>nav:nth-of-type(3)>a:nth-child(1)::before {
+    content: '\f015';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+body>header>nav:nth-of-type(3)>a:nth-child(2)::before {
+    content: '\f1ad';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+body>header>nav:nth-of-type(3)>a:nth-child(3)::before {
+    content: '\f1ea';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
+
+body>header>nav:nth-of-type(3)>a:nth-child(4)::before {
+    content: '\f15c';
+    font-family: "Font Awesome 6 Free";
+    font-weight: 900;
+    margin-bottom: 8px;
+    font-size: 1.5rem;
+}
