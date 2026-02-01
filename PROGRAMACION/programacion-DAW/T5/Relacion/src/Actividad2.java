@@ -13,14 +13,14 @@ public class Actividad2 {
         System.out.println("--------------------------------------------------------------------------------");
 
         try {
-            BufferedReader br = new BufferedReader(new FileReader(fichero));
+            BufferedReader buffer = new BufferedReader(new FileReader(fichero));
             String linea;
 
             String superhero = "";
             String publisher = "";
             String appearance = "";
 
-            while ((linea = br.readLine()) != null) {
+            while ((linea = buffer.readLine()) != null) {
                 linea = linea.trim();
 
                 if (linea.startsWith("\"superhero\":")) {
@@ -41,7 +41,7 @@ public class Actividad2 {
                     appearance = "";
                 }
             }
-            br.close();
+            buffer.close();
 
         } catch (Exception e) {
             System.out.println("Error leyendo el fichero JSON");

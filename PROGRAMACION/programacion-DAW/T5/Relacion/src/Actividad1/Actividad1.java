@@ -10,25 +10,25 @@ import java.util.Scanner;
 public class Actividad1 {
 
     public static void main(String[] args) {
-        Scanner sc = new Scanner(System.in);
+        Scanner teclado = new Scanner(System.in);
 
         // Pedimos las rutas
         System.out.println("Introduce la ruta del primer fichero:");
-        String ruta1 = sc.nextLine();
+        String ruta1 = teclado.nextLine();
 
         System.out.println("Introduce la ruta del segundo fichero:");
-        String ruta2 = sc.nextLine();
+        String ruta2 = teclado.nextLine();
 
         System.out.println("Introduce la ruta del directorio de destino:");
-        String rutaDestino = sc.nextLine();
+        String rutaDestino = teclado.nextLine();
 
         // Creamos objetos File para sacar los nombres
-        File f1 = new File(ruta1);
-        File f2 = new File(ruta2);
+        File fichero1 = new File(ruta1);
+        File fichero2 = new File(ruta2);
 
         // Sacamos los nombres sin extension
-        String nombre1 = f1.getName();
-        String nombre2 = f2.getName();
+        String nombre1 = fichero1.getName();
+        String nombre2 = fichero2.getName();
 
         // Quitamos la extensión suponiendo que tienen (buscamos el último punto)
         if (nombre1.contains(".")) {
@@ -50,43 +50,43 @@ public class Actividad1 {
 
         String rutaFinal = rutaDestino + nombreNuevo;
 
-        System.out.println("El fichero se guardará en: " + rutaFinal);
+        System.out.println("El fichero se guardara en: " + rutaFinal);
 
         // Hacemos el copiado
         try {
             // Preparamos para leer los dos ficheros
-            BufferedReader br1 = new BufferedReader(new FileReader(f1));
-            BufferedReader br2 = new BufferedReader(new FileReader(f2));
+            BufferedReader buffer1 = new BufferedReader(new FileReader(fichero1));
+            BufferedReader buffer2 = new BufferedReader(new FileReader(fichero2));
 
             // Preparamos para escribir en el nuevo
-            BufferedWriter bw = new BufferedWriter(new FileWriter(rutaFinal));
+            BufferedWriter buffer = new BufferedWriter(new FileWriter(rutaFinal));
 
             String linea = "";
 
             // Leemos el primero y escribimos
-            while ((linea = br1.readLine()) != null) {
-                bw.write(linea);
-                bw.newLine();
+            while ((linea = buffer1.readLine()) != null) {
+                buffer.write(linea);
+                buffer.newLine();
             }
 
             // Leemos el segundo y escribimos
-            while ((linea = br2.readLine()) != null) {
-                bw.write(linea);
-                bw.newLine();
+            while ((linea = buffer2.readLine()) != null) {
+                buffer.write(linea);
+                buffer.newLine();
             }
 
             // Cerramos todo
-            br1.close();
-            br2.close();
-            bw.close();
+            buffer1.close();
+            buffer2.close();
+            buffer.close();
 
-            System.out.println("¡Copia realizada con éxito!");
+            System.out.println("Copia realizada");
 
         } catch (Exception e) {
-            System.out.println("Ha ocurrido un error leyendo o escribiendo ficheros.");
+            System.out.println("Ha ocurrido un error");
             e.printStackTrace();
         }
 
-        sc.close();
+        teclado.close();
     }
 }

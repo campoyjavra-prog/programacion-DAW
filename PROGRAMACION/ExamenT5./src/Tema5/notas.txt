@@ -1,0 +1,5 @@
+Pepe;8.5
+Maria;9.0
+Juan;5.5
+Lucia;7.2
+Manuel;4.8

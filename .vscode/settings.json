@@ -4,6 +4,7 @@
         "/Users/rafacamjv/Downloads/json-simple-1.1.1.jar",
         "/Users/rafacamjv/Desktop/CICLOS/1DAW/mysql-connector-j-9.5.0.jar",
         "/Users/rafacamjv/Downloads/mysql-shell-9.6.0-macos15-arm64/**/*.jar",
-        "/Users/rafacamjv/Downloads/mysql-connector-j-9.5.0.jar"
+        "/Users/rafacamjv/Downloads/mysql-connector-j-9.5.0.jar",
+        "/Users/rafacamjv/Desktop/json-simple-1.1.1.jar"
     ]
 }
