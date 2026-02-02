@@ -1,0 +1,35 @@
+{
+    "empresa": "TechCorp",
+    "empleados": [
+        {
+            "id": 1,
+            "nombre": "Laura",
+            "roles": [
+                "admin",
+                "backend"
+            ],
+            "activo": true
+        },
+        {
+            "id": 2,
+            "nombre": "Pedro",
+            "roles": [
+                "frontend"
+            ],
+            "activo": false
+        },
+        {
+            "id": 3,
+            "nombre": "Juan",
+            "roles": [
+                "frontend",
+                "admin"
+            ],
+            "activo": true
+        }
+    ],
+    "direccion": {
+        "ciudad": "Barcelona",
+        "pais": "España"
+    }
+}

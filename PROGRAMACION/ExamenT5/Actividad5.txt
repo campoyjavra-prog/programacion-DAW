@@ -1,0 +1,5 @@
+5. ¿Cuándo puede interesarnos crear una clase abstracta? ¿Y una clase interfaz? 
+La clase abstracta sirve para heredar código que ya está hecho y terminar otros métodos.
+La clase interfaz define una acción que pueden tener clases muy distintas, que no tienen nada que ver entre sí. se usa el instanceof
+
+
