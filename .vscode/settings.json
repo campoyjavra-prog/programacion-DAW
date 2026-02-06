@@ -1,4 +1,9 @@
 {
+    "java.project.sourcePaths": [
+        "PROGRAMACION/programacion-DAW/T4/src",
+        "PROGRAMACION/programacion-DAW/T5/src",
+        "PROGRAMACION/programacion-DAW/T6/src"
+    ],
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "/Users/rafacamjv/Downloads/json-simple-1.1.1.jar",
