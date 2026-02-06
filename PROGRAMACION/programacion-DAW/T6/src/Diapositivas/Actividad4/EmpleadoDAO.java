@@ -1,4 +1,4 @@
-package Actividad4;
+package Diapositivas.Actividad4;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
