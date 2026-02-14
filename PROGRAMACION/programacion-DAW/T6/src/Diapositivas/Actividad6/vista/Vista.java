@@ -2,10 +2,9 @@ package Diapositivas.Actividad6.vista;
 
 import java.sql.Date;
 import java.util.Scanner;
+import java.util.List;
 
 import Diapositivas.Actividad6.modelo.*;
-
-import java.util.List;
 
 public class Vista {
     private Scanner scanner = new Scanner(System.in);
