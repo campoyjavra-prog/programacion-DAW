@@ -1,0 +1,8 @@
+nav#nav-ppal {
+    border: solid;
+}
+
+nav#nav-ppal a {
+    color: red;
+    background-color: yellow;
+}

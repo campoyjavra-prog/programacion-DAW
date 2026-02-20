@@ -1,19 +1,21 @@
+import './Header.css';
+
 import { Disclosure, DisclosureButton, DisclosurePanel, Menu, MenuButton, MenuItem, MenuItems } from '@headlessui/react'
 import { Bars3Icon, BellIcon, XMarkIcon } from '@heroicons/react/24/outline'
 
 // navigation es un array JS de objetos que contiene la informacion de los enlaces del header
-const navigation = [
+const opciones = [
     {
         name: 'Quien Somos',
-        href: '#',
+        href: '#qsomos',
         current: true
     },
 
-    { name: 'Trabajos', href: '#', current: false },
-    { name: 'Servicios', href: '#', current: false },
-    { name: 'Contacto', href: '#', current: false },
-    { name: 'Productos', href: '#', current: false },
-    { name: 'Categorias', href: '#', current: false },
+    { name: 'Trabajos', href: '#trabajos', current: false },
+    { name: 'Servicios', href: '#servicios', current: false },
+    { name: 'Contacto', href: '#contacto', current: false },
+    { name: 'Productos', href: '#productos', current: false },
+    { name: 'Categorias', href: '#categorias', current: false },
 ]
 
 
@@ -24,7 +26,7 @@ function classNames(...classes: any[]) {
 
 function Header() {
     return (
-        <Disclosure as="nav" className="relative bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
+        <Disclosure as="header" className="fixed top-0 left-0 w-full bg-gray-800/50 after:pointer-events-none after:absolute after:inset-x-0 after:bottom-0 after:h-px after:bg-white/10">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">
@@ -36,7 +38,7 @@ function Header() {
                             <XMarkIcon aria-hidden="true" className="hidden size-6 group-data-[open]:block" />
                         </DisclosureButton>
                     </div>
-                    <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
+                    <div className="flex flex-1 items-center justify-around sm: items-stretch sm:justify-start">
                         <div className="flex shrink-0 items-center">
                             <img
                                 alt="Your Company"
@@ -45,8 +47,8 @@ function Header() {
                             />
                         </div>
                         <div className="hidden sm:ml-6 sm:block">
-                            <div className="flex space-x-4">
-                                {navigation.map((item) => (
+                            <nav id="nav-ppal" className="flex space-x-4">
+                                {opciones.map((item) => (
                                     <a
                                         key={item.name}
                                         href={item.href}
@@ -59,7 +61,7 @@ function Header() {
                                         {item.name}
                                     </a>
                                 ))}
-                            </div>
+                            </nav>
                         </div>
                     </div>
                     <div className="absolute inset-y-0 right-0 flex items-center pr-2 sm:static sm:inset-auto sm:ml-6 sm:pr-0">
@@ -117,7 +119,15 @@ function Header() {
                                         href="#"
                                         className="block px-4 py-2 text-sm text-gray-300 data-[focus]:bg-white/5 data-[focus]:outline-hidden"
                                     >
-                                        Sign out
+                                        Salir
+                                    </a>
+                                </MenuItem>
+                                <MenuItem>
+                                    <a
+                                        href="#"
+                                        className="block px-4 py-2 text-sm text-gray-300 data-[focus]:bg-white/5 data-[focus]:outline-hidden"
+                                    >
+                                        Registro
                                     </a>
                                 </MenuItem>
                             </MenuItems>
@@ -127,8 +137,8 @@ function Header() {
             </div>
 
             <DisclosurePanel className="sm:hidden">
-                <div className="space-y-1 px-2 pt-2 pb-3">
-                    {navigation.map((item) => (
+                <nav className="space-y-1 px-2 pt-2 pb-3">
+                    {opciones.map((item) => (
                         <DisclosureButton
                             key={item.name}
                             as="a"
@@ -142,7 +152,7 @@ function Header() {
                             {item.name}
                         </DisclosureButton>
                     ))}
-                </div>
+                </nav>
             </DisclosurePanel>
         </Disclosure>
     );
