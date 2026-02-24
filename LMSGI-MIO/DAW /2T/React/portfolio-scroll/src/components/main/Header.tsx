@@ -12,7 +12,7 @@ const opciones = [
     },
 
     { name: 'Trabajos', href: '#trabajos', current: false },
-    { name: 'Servicios', href: '#servicios', current: false },
+    { name: 'Formaciones', href: '#formaciones', current: false },
     { name: 'Contacto', href: '#contacto', current: false },
     { name: 'Productos', href: '#productos', current: false },
     { name: 'Categorias', href: '#categorias', current: false },
