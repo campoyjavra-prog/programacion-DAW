@@ -4,6 +4,7 @@ import Header from "../components/main/Header";
 import QSomos from "../sections/QSomos";
 import Trabajos from "../sections/Trabajos";
 import Formaciones from "../sections/Formaciones";
+import Servicios from "../sections/Servicios";
 
 function MainLayout() {
     return (
@@ -13,6 +14,7 @@ function MainLayout() {
                 <QSomos />
                 <Trabajos />
                 <Formaciones />
+                <Servicios />
             </main>
         </div>
     );
