@@ -1,9 +1,9 @@
-package Diapositivas.Actividad6.controlador;
+package Diapositivas.Actividad8.controlador;
 
 import java.util.List;
 
-import Diapositivas.Actividad6.modelo.*;
-import Diapositivas.Actividad6.vista.Vista;
+import Diapositivas.Actividad8.modelo.*;
+import Diapositivas.Actividad8.vista.Vista;
 
 public class Controlador {
     private Vista vista;

@@ -1,4 +1,4 @@
-package Diapositivas.Actividad6.modelo;
+package Diapositivas.Actividad8.modelo;
 
 public class Profesor {
     private int id;

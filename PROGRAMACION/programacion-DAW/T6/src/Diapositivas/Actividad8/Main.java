@@ -1,7 +1,7 @@
-package Diapositivas.Actividad6;
+package Diapositivas.Actividad8;
 
-import Diapositivas.Actividad6.controlador.Controlador;
-import Diapositivas.Actividad6.vista.Vista;
+import Diapositivas.Actividad8.controlador.Controlador;
+import Diapositivas.Actividad8.vista.Vista;
 
 public class Main {
     public static void main(String[] args) {

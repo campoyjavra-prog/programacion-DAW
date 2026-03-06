@@ -1,31 +1,28 @@
-package Diapositivas.Actividad6.modelo;
+package Diapositivas.Actividad7.modelo;
 
-import java.sql.Date;
-
-public class Alumno {
-    private String numeroMatricula;
+public class Profesor {
+    private int id;
     private String nombre;
     private String apellido1;
     private String apellido2;
-    private Date fechaNacimiento;
+    private String especialidad;
     private String telefono;
 
-    public Alumno(String numeroMatricula, String nombre, String apellido1, String apellido2, Date fechaNacimiento,
-            String telefono) {
-        this.numeroMatricula = numeroMatricula;
+    public Profesor(int id, String nombre, String apellido1, String apellido2, String especialidad, String telefono) {
+        this.id = id;
         this.nombre = nombre;
         this.apellido1 = apellido1;
         this.apellido2 = apellido2;
-        this.fechaNacimiento = fechaNacimiento;
+        this.especialidad = especialidad;
         this.telefono = telefono;
     }
 
-    public String getNumeroMatricula() {
-        return numeroMatricula;
+    public int getId() {
+        return id;
     }
 
-    public void setNumeroMatricula(String numeroMatricula) {
-        this.numeroMatricula = numeroMatricula;
+    public void setId(int id) {
+        this.id = id;
     }
 
     public String getNombre() {
@@ -52,12 +49,12 @@ public class Alumno {
         this.apellido2 = apellido2;
     }
 
-    public Date getFechaNacimiento() {
-        return fechaNacimiento;
+    public String getEspecialidad() {
+        return especialidad;
     }
 
-    public void setFechaNacimiento(Date fechaNacimiento) {
-        this.fechaNacimiento = fechaNacimiento;
+    public void setEspecialidad(String especialidad) {
+        this.especialidad = especialidad;
     }
 
     public String getTelefono() {
@@ -70,7 +67,7 @@ public class Alumno {
 
     @Override
     public String toString() {
-        return String.format("Matrícula: %s | %s %s %s | Nac: %s | Tlf: %s", numeroMatricula, nombre, apellido1,
-                apellido2, fechaNacimiento, telefono);
+        return String.format("ID: %d | %s %s %s | Esp: %s | Tlf: %s", id, nombre, apellido1, apellido2, especialidad,
+                telefono);
     }
 }
