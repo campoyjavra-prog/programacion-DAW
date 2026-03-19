@@ -5,7 +5,10 @@ import App from './App.tsx'
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>
-    {/* Componente proviene de la exportación de App.tsx */}
-    <App />
+    {/* Componente App proviene de la exportacion del App.tsx 
+        todo el HTML que devuelve el <App></App> se sustitituye 
+        en el etiqueta <App /> 
+    */}
+    <App /> 
   </StrictMode>,
 )
