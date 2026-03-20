@@ -70,7 +70,7 @@ public class LibroController {
     // METODOS
 
     private void insertar() {
-        try {
+        try { //Lectura datos de la vista (JTextField)
             int codigoLibro = Integer.parseInt(view.txtCodigoLibro.getText());
             String titulo = view.txtTitulo.getText();
             String editorial = view.txtEditorial.getText();
@@ -81,7 +81,7 @@ public class LibroController {
             if (imagen.isEmpty()) {
                 imagen = "https://via.placeholder.com/150?text=No+Image";
             }
-
+            // Llama al DAO y se crea el objeto Libro
             dao.insertar(new Libro(titulo, codigoLibro, editorial, genero, precio, autor, imagen));
             cargarTabla();
             limpiar();
@@ -95,10 +95,10 @@ public class LibroController {
 
     private void actualizar() {
         int fila = view.tablaLibros.getSelectedRow();
-        if (fila == -1)
+        if (fila == -1) // Comprueba que hay una fila seleccionada
             return;
 
-        try {
+        try { // Lee datos del formulario → crea objeto → dao.actualizar(objeto)
             int codigoLibro = Integer.parseInt(view.txtCodigoLibro.getText());
             String titulo = view.txtTitulo.getText();
             String editorial = view.txtEditorial.getText();
@@ -125,8 +125,8 @@ public class LibroController {
         int fila = view.tablaLibros.getSelectedRow();
         if (fila == -1)
             return;
-        int codigoLibro = Integer.parseInt(view.modeloTabla.getValueAt(fila, 1).toString()); // Asumiendo código en col
-                                                                                             // 1
+        int codigoLibro = Integer.parseInt(view.modeloTabla.getValueAt(fila, 1).toString()); // Obtiene el ID/clave de la tabla
+                                                                                             
         try {
             dao.eliminar(codigoLibro);
             cargarTabla();
@@ -152,9 +152,9 @@ public class LibroController {
     }
 
     private void cargarTabla() {
-        view.modeloTabla.setRowCount(0);
-        List<Libro> lista = dao.listar();
-        for (Libro l : lista) {
+        view.modeloTabla.setRowCount(0); // Borra todas las filas
+        List<Libro> lista = dao.listar(); // Pide la lista al DAO
+        for (Libro l : lista) { // Por cada elemento, añade una fila al modelo de la tabla
             view.modeloTabla.addRow(new Object[] {
                     l.getTitulo(),
                     l.getCodigoLibro(),
@@ -170,10 +170,10 @@ public class LibroController {
     private void mostrarImagen(String urlStr) {
         try {
             URL url = new URL(urlStr);
-            ImageIcon icon = new ImageIcon(url);
-            // Redimensionar si es necesario
+            ImageIcon icon = new ImageIcon(url); // Descarga la imagen de internet
+            
             java.awt.Image img = icon.getImage().getScaledInstance(150, 200, java.awt.Image.SCALE_SMOOTH);
-            view.lblImagen.setIcon(new ImageIcon(img));
+            view.lblImagen.setIcon(new ImageIcon(img)); // La muestra en el JLabel
         } catch (Exception e) {
             view.lblImagen.setIcon(null);
             view.lblImagen.setText("Error Imagen");

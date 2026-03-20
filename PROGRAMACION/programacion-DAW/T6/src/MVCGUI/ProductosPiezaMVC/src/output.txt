@@ -1,0 +1,18 @@
+Warning: the fonts "Times" and "Lucida Bright" are not available for the Java logical font "Serif", which may have unexpected appearance or behavior. Re-enable the "Times" font to remove this warning.
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/daw
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at modelo.Conexion.getConnection(Conexion.java:13)
+	at modelo.CategoriaDAO.listar(CategoriaDAO.java:14)
+	at controlador.CategoriaController.cargarTabla(CategoriaController.java:87)
+	at controlador.CategoriaController.initController(CategoriaController.java:25)
+	at controlador.CategoriaController.<init>(CategoriaController.java:16)
+	at Main.main(Main.java:20)
+java.sql.SQLException: No suitable driver found for jdbc:mysql://localhost:3306/daw
+	at java.sql.DriverManager.getConnection(DriverManager.java:689)
+	at java.sql.DriverManager.getConnection(DriverManager.java:247)
+	at modelo.Conexion.getConnection(Conexion.java:13)
+	at modelo.CategoriaDAO.listar(CategoriaDAO.java:14)
+	at controlador.CategoriaController.cargarTabla(CategoriaController.java:87)
+	at controlador.CategoriaController.<init>(CategoriaController.java:17)
+	at Main.main(Main.java:20)
