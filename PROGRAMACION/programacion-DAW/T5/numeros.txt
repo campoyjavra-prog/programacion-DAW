@@ -1,2 +1,0 @@
-jugador1=4
-jugador2=12
