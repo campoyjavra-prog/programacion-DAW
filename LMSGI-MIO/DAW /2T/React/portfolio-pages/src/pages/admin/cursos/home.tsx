@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { getCursos } from '../../../model/api/main/apiCursos';
 import type { ICurso } from '../../../model/interfaces/ICurso';
 import NewCurso from '../../../components/admin/cursos/NewCurso';
