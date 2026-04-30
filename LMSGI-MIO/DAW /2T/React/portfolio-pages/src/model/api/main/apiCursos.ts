@@ -25,6 +25,17 @@ export const getCursos = async (): Promise<ICurso[]> => {
 // getFilterCursos(precio, academia, categoria)
 
 export const insertarCurso = async (curso: any) => {
+    // Obtenemos el id más alto para evitar el error de secuencia desincronizada
+    const { data: lastCurso } = await supabase
+        .from('cursos')
+        .select('idCurso')
+        .order('idCurso', { ascending: false })
+        .limit(1)
+        .single()
+    
+    const nextId = (lastCurso?.idCurso || 0) + 1;
+    curso.idCurso = nextId;
+
     const { data, error } = await supabase
         .from('cursos')
         .insert([curso])

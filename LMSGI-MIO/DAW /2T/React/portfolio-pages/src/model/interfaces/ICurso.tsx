@@ -3,4 +3,6 @@ export interface ICurso {
     titulo: string;
     academia: string;
     precio: number;
+    categoria: string;
+    imagenUrl: string;
 }

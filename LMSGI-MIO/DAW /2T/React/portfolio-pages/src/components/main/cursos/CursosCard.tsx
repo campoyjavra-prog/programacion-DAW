@@ -39,8 +39,12 @@ export const CursosCard = ({ cursos }: Props) => {
                         <div className="absolute -right-4 -top-4 h-24 w-24 rounded-full bg-emerald-500/5 blur-2xl group-hover:bg-emerald-500/10 transition-colors" />
 
                         <div className="flex items-start justify-between">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform shadow-inner">
-                                {getIconForCurso(curso.titulo)}
+                            <div className={`flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-500/10 text-emerald-400 group-hover:scale-110 transition-transform shadow-inner ${curso.imagenUrl ? 'overflow-hidden' : ''}`}>
+                                {curso.imagenUrl ? (
+                                    <img src={curso.imagenUrl} alt={curso.titulo} className="h-full w-full object-cover" />
+                                ) : (
+                                    getIconForCurso(curso.titulo)
+                                )}
                             </div>
                             <div className="text-right">
                                 <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-slate-500">Inversión</p>
@@ -60,6 +64,11 @@ export const CursosCard = ({ cursos }: Props) => {
                                     {curso.academia}
                                 </p>
                             </div>
+                            {curso.categoria && (
+                                <div className="mt-3 inline-flex items-center rounded-full border border-emerald-500/30 bg-emerald-500/10 px-2.5 py-0.5 text-xs font-semibold text-emerald-400 transition-colors hover:bg-emerald-500/20">
+                                    {curso.categoria}
+                                </div>
+                            )}
                         </div>
 
                         {/* Línea decorativa al final */}
