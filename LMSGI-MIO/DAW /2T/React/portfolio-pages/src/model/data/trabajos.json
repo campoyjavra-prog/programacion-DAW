@@ -1,0 +1,34 @@
+[
+    {
+        "id": 1,
+        "titulo": "E-Commerce Nova",
+        "descripcion": "Plataforma de ventas ultra rápida con pasarela de pagos integrada, carrito dinámico y panel de administración en tiempo real.",
+        "imagen": "https://images.unsplash.com/photo-1661956602116-aa6865609028?auto=format&fit=crop&q=80&w=800",
+        "tecnologias": ["Next.js", "Tailwind", "Stripe"],
+        "link": "#"
+    },
+    {
+        "id": 2,
+        "titulo": "CryptoTracker",
+        "descripcion": "Dashboard financiero para monitorear el mercado de criptomonedas con gráficos interactivos y alertas personalizadas.",
+        "imagen": "https://images.unsplash.com/photo-1605792657660-596af9009e82?auto=format&fit=crop&q=80&w=800",
+        "tecnologias": ["React", "D3.js", "TypeScript"],
+        "link": "#"
+    },
+    {
+        "id": 3,
+        "titulo": "Aura AI",
+        "descripcion": "Interfaz conversacional minimalista potenciada por inteligencia artificial para asistencia personal y generación de textos.",
+        "imagen": "https://images.unsplash.com/photo-1677442136019-21780ecad995?auto=format&fit=crop&q=80&w=800",
+        "tecnologias": ["OpenAI API", "Node.js", "React"],
+        "link": "#"
+    },
+    {
+        "id": 4,
+        "titulo": "Taskify Pro",
+        "descripcion": "Aplicación de gestión de proyectos colaborativa con tableros Kanban, chat integrado y notificaciones push.",
+        "imagen": "https://images.unsplash.com/photo-1611224923853-80b023f02d71?auto=format&fit=crop&q=80&w=800",
+        "tecnologias": ["Vue", "Firebase", "Tailwind"],
+        "link": "#"
+    }
+]
